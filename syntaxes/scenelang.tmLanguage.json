@@ -1,0 +1,168 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SceneLang",
+	"patterns": [
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#math-expressions"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#colors"
+		},
+		{
+			"include": "#points"
+		},
+		{
+			"include": "#lists"
+		},
+		{
+			"include": "#concatenators"
+		},
+		{
+			"include": "#declared-variables"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"commands":{
+			"patterns": [{
+				
+				"match": "\\b((USING|SPAWN)|(SET|UNSET|DUMP)|(LOAD|ROTATE|TRANSLATE|SCALE|UNITE|INTERSECT|DIFF|FUSE)|([A-Z_]+))\\b",
+				"captures": {
+					"2":{
+						"name": "keyword.other.using.scenelang"
+					},
+					"3":{
+						"name": "keyword.scenelang"
+					},
+					"4":{
+						"name": "entity.name.scope-resolution.scenelang"
+					},
+					"5":{
+						"name": "invalid.illegal.scenelang"
+					}
+				}
+			}]
+		},
+		"types":{
+			"patterns": [{
+				"name": "entity.name.type.scenelang",
+				"match": "(?<![.])(?<=\\b)[A-Z]\\w*[a-z]\\w*\\b"
+			},
+			{
+				"name":"entity.name.operator.custom-literal.scenelang",
+				"comment": "storage.type.modifier.scenelang",
+				"match": "[.][A-Z]\\w*\\s*(?=\\()"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.scenelang",
+				"match": "(?<=\\W)[.]\\w+(?=\\b)"
+			},
+			{
+				"name":"entity.other.attribute.scenelang",
+				"match": "(?<=[A-Z_0-9])[.]\\w+(?=\\b)"
+			},
+			{
+				"name":"invalid.illegal.scenelang",
+				"match": "(?<=[^A-Z_0-9])[.]\\w+(?=\\b)"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.scenelang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scenelang",
+					"match": "\\\\."
+				}
+			]
+		},
+		"math-expressions": {
+			"name": "meta.preprocessor.numeric.scenelang",
+			"begin": "\\$",
+			"end": "\\$",
+			"patterns": [
+				{
+					"include": "#identifiers"
+				}
+			]
+		},
+		"identifiers": {
+			"name": "variable.scenelang",
+			"match": "(?<=([^.\\w]|^))[a-z][\\w]*(?!\\()\\b"
+		},
+		"numbers": {
+			"name": "constant.numeric.scenelang",
+			"match": "(?<=\\W)\\d+(?=\\D)"
+		},
+		"colors":{
+			"name": "support.constant.color.scenelang",
+			"begin": "<",
+			"end": ">",
+			"patterns": [
+				{
+					"include": "#identifiers"
+				}
+			]
+		},
+		"points":{
+			"name": "support.constant.media.scenelang",
+			"begin": "{",
+			"end": "}",
+			"patterns": [
+				{
+					"include": "#identifiers"
+				}
+			]
+		},
+		"lists":{
+			"name": "support.constant.media.scenelang",
+			"begin": "\\[",
+			"end": "\\]",
+			"patterns": [
+				{
+					"include": "#identifiers"
+				},
+				{
+					"include": "#numbers"
+				}
+			]
+		},
+		"concatenators":{
+			"match": "(?<=\\w)\\s*(\\*)(?=\\s*\\w)",
+			"captures": {
+				"1": {
+					"name" : "keyword.operator.scenelang"
+				}
+			}
+		},
+		"comments":{
+			"name":"comment.line.number-sign.scenelang",
+			"begin": "#",
+			"end": "($|\\z)"
+		}
+},
+	"scopeName": "source.sl"
+}

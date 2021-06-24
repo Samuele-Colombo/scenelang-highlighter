@@ -115,7 +115,7 @@
 		},
 		"numbers": {
 			"name": "constant.numeric.scenelang",
-			"match": "(?<=\\W)\\d+(?=\\D)"
+			"match": "(?<=\\W)([+]|-)?[\\d.]+(e([+]|-)?\\d+)?(?=\\D)"
 		},
 		"colors":{
 			"name": "support.constant.color.scenelang",

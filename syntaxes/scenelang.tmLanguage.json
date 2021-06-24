@@ -159,9 +159,17 @@
 			}
 		},
 		"comments":{
-			"name":"comment.line.number-sign.scenelang",
-			"begin": "#",
-			"end": "($|\\z)"
+			"patterns": [{
+				"name":"comment.line.number-sign.scenelang",
+				"begin": "#(?!=)",
+				"end": "($|\\z)"
+			},
+			{
+				"name":"comment.block",
+				"begin": "#=",
+				"end": "=#"
+			}
+			]
 		}
 },
 	"scopeName": "source.sl"

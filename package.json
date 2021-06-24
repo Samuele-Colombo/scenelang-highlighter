@@ -4,6 +4,10 @@
     "description": "Highlighter for the SceneLang Demain-Specific language from the Julia package Raytracer.jl",
     "version": "0.1.0",
     "publisher": "samuele-colombo",
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/Samuele-Colombo/scenelang-highlighter"
+	},
     "engines": {
         "vscode": "^1.57.0"
     },

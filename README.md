@@ -5,10 +5,11 @@ This extension provides syntax highlighting for the SceneLang Domain-Specific La
 ## Features
 
 - Syntax Highliting
-	- Distinguishes scene-related commands, instruction commands, and construction commands 
-	- marks as invalid all non-existing commands
+	- Distinguishes scene-related commands, instruction commands, and construction commands
+	- Marks as invalid all non-existing commands
 	- Distinguishes type-extension keywords, attribute keywords, and command extension keywords
-	- marks as invalid all non-constructing keywords following a lowercase letter
+	- Marks as invalid all non-constructing keywords following a lowercase letter
+	- In math expression marks as invalid identifiers preceded by a dot
 
 > **Note:** for devevelopers. If any commands are added to the language add them in the `syntaxes/scenelang.tmLanguage.json` file too.
 

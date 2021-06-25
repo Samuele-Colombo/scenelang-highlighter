@@ -46,7 +46,7 @@
 		"commands":{
 			"patterns": [{
 				
-				"match": "\\b((USING|SPAWN)|(SET|UNSET|DUMP)|(LOAD|ROTATE|TRANSLATE|SCALE|UNITE|INTERSECT|DIFF|FUSE)|([A-Z_]+))\\b",
+				"match": "\\b((USING|SPAWN)|(SET|UNSET|DUMP)|(LOAD|ROTATE|TRANSLATE|SCALE|UNITE|INTERSECT|DIFF|FUSE)|([A-Z][A-Z_]*))\\b",
 				"captures": {
 					"2":{
 						"name": "keyword.other.using.scenelang"
@@ -111,7 +111,7 @@
 		},
 		"identifiers": {
 			"name": "variable.scenelang",
-			"match": "(?<=([^.\\w]|^))[a-z][\\w]*(?!\\()\\b"
+			"match": "(?<=([^.\\w]|^))[a-z_][\\w]*(?!\\()\\b"
 		},
 		"numbers": {
 			"name": "constant.numeric.scenelang",

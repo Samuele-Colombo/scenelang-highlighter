@@ -17,9 +17,17 @@ Here reported is a screenshot of how the syntax highlighting would appear when u
 
 ![feature X](images/scenelang_highlighting_example.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
 ## Release Notes
+
+### 0.1.2
+
+Fix some highlighting issues
+- identifiers in math expressions
+- words starting with an underscore are identifiers, not commands
+
+### 0.1.1
+
+Day One hotfixes
 
 ### 0.1.0
 

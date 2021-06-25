@@ -106,6 +106,19 @@
 			"patterns": [
 				{
 					"include": "#identifiers"
+				},
+				{
+					"include": "#numbers"
+				},
+				{
+					"name": "variable.scenelang",
+					"comment": "same as identifiers but allow being preceded by numbers",		
+					"match": "(?<=\\d)[a-z_][\\w]*(?![\\(+-])\\b"
+				},
+				{
+					"name":"invalid.illegal.scenelang",
+					"comment": "if an identifier is directly precede by a dot an error will be thrown at evaluation time",
+					"match": "(?<=.)[a-z_][\\w]*(?!\\()\\b"
 				}
 			]
 		},

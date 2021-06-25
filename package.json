@@ -2,7 +2,7 @@
     "name": "scenelang-highlighter",
     "displayName": "SceneLang_Highlighter",
     "description": "Highlighter for the SceneLang Demain-Specific language from the Julia package Raytracer.jl",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "publisher": "samuele-colombo",
     "repository": {
 		"type": "git",

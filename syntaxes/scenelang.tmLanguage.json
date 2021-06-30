@@ -46,7 +46,7 @@
 		"commands":{
 			"patterns": [{
 				
-				"match": "\\b((USING|SPAWN)|(SET|UNSET|DUMP)|(LOAD|ROTATE|TRANSLATE|SCALE|UNITE|INTERSECT|DIFF|FUSE)|([A-Z][A-Z_]*))\\b",
+				"match": "\\b((USING|SPAWN)|(SET|UNSET|DUMP)|(LOAD|ROTATE|TRANSLATE|SCALE|UNITE|INTERSECT|DIFF|FUSE|TIME)|([A-Z][A-Z_]*))\\b",
 				"captures": {
 					"2":{
 						"name": "keyword.other.using.scenelang"
@@ -71,7 +71,7 @@
 			{
 				"name":"entity.name.operator.custom-literal.scenelang",
 				"comment": "storage.type.modifier.scenelang",
-				"match": "[.][A-Z]\\w*\\s*(?=\\()"
+				"match": "[.][A-Z]\\w*(?=\\s*\\()"
 			}]
 		},
 		"keywords": {

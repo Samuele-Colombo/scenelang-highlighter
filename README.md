@@ -19,6 +19,9 @@ Here reported is a screenshot of how the syntax highlighting would appear when u
 
 ## Release Notes
 
+### 0.1.3
+Add `TIME` command highlighting
+
 ### 0.1.2
 
 Fix some highlighting issues

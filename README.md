@@ -19,19 +19,6 @@ Here reported is a screenshot of how the syntax highlighting would appear when u
 
 ## Release Notes
 
-### 0.1.3
-Add `TIME` command highlighting
-
-### 0.1.2
-
-Fix some highlighting issues
-- identifiers in math expressions
-- words starting with an underscore are identifiers, not commands
-
-### 0.1.1
-
-Day One hotfixes
-
 ### 0.1.0
 
 Initial release
